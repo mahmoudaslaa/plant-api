@@ -63,7 +63,7 @@ def preprocess_image(file_bytes):
         if x is None:
             raise ValueError("Invalid image")
 
-        x = cv2.resize(x, (160, 160))
+        x = cv2.resize(x, (100, 100))
         return np.expand_dims(x, axis=0)
     except Exception as e:
         raise ValueError(f"Error processing image: {e}")
